@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le programme, Netra</title>
+  <meta name="description" content="Le programme de la liste Netra pour le campus.">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=general-sans@400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+    try { if (sessionStorage.getItem('netra-curtain') === '1') document.documentElement.classList.add('from-curtain'); } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <div class="curtain" aria-hidden="true"><svg class="curtain__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg></div>
+  <svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="iris-l"><path d="M26 24 L214 28 C 238 40, 242 72, 216 100 C 170 114, 92 106, 26 24 Z"/></clipPath>
+      <clipPath id="iris-r"><path d="M26 24 L214 28 C 238 40, 242 72, 216 100 C 170 114, 92 106, 26 24 Z"/></clipPath>
+      <g id="eyes-art">
+      <g class="eye eye--l">
+        <g clip-path="url(#iris-l)">
+        <g class="eye__look">
+          <path d="M78 18 L78 50 A62 62 0 0 0 202 50 L202 18"/>
+          <path d="M88 18 L88 50 A52 52 0 0 0 192 50 L192 18"/>
+          <path d="M98 18 L98 50 A42 42 0 0 0 182 50 L182 18"/>
+          <path d="M108 18 L108 50 A32 32 0 0 0 172 50 L172 18"/>
+          <path d="M118 18 L118 50 A22 22 0 0 0 162 50 L162 34"/>
+          <path class="eye__pupil" d="M130 30 L130 50 A10 10 0 0 0 150 50"/>
+        </g>
+          <rect class="eye__lid" x="0" y="0" width="270" height="130"/>
+        </g>
+        <g class="eye__glow">
+          <path d="M8 14 L226 20 C 250 26, 262 70, 262 128 C 262 150, 258 168, 252 182 C 246 160, 238 132, 222 110 C 176 126, 92 116, 8 14 Z"/>
+          <path d="M28 27 L212 31 C 230 36, 240 62, 242 102"/>
+          <path d="M30 33 C 92 104, 170 112, 214 98"/>
+        </g>
+        <g class="eye__tube">
+          <path d="M8 14 L226 20 C 250 26, 262 70, 262 128 C 262 150, 258 168, 252 182 C 246 160, 238 132, 222 110 C 176 126, 92 116, 8 14 Z"/>
+          <path d="M28 27 L212 31 C 230 36, 240 62, 242 102"/>
+          <path d="M30 33 C 92 104, 170 112, 214 98"/>
+        </g>
+      </g>
+      <g class="eye eye--r" transform="translate(600 0) scale(-1 1)">
+        <g clip-path="url(#iris-r)">
+        <g class="eye__look">
+          <path d="M78 18 L78 50 A62 62 0 0 0 202 50 L202 18"/>
+          <path d="M88 18 L88 50 A52 52 0 0 0 192 50 L192 18"/>
+          <path d="M98 18 L98 50 A42 42 0 0 0 182 50 L182 18"/>
+          <path d="M108 18 L108 50 A32 32 0 0 0 172 50 L172 18"/>
+          <path d="M118 18 L118 50 A22 22 0 0 0 162 50 L162 34"/>
+          <path class="eye__pupil" d="M130 30 L130 50 A10 10 0 0 0 150 50"/>
+        </g>
+          <rect class="eye__lid" x="0" y="0" width="270" height="130"/>
+        </g>
+        <g class="eye__glow">
+          <path d="M8 14 L226 20 C 250 26, 262 70, 262 128 C 262 150, 258 168, 252 182 C 246 160, 238 132, 222 110 C 176 126, 92 116, 8 14 Z"/>
+          <path d="M28 27 L212 31 C 230 36, 240 62, 242 102"/>
+          <path d="M30 33 C 92 104, 170 112, 214 98"/><path d="M182 -18 L152 58"/><path d="M142 82 L96 198"/><path d="M194 -12 L166 52"/>
+        </g>
+        <g class="eye__tube">
+          <path d="M8 14 L226 20 C 250 26, 262 70, 262 128 C 262 150, 258 168, 252 182 C 246 160, 238 132, 222 110 C 176 126, 92 116, 8 14 Z"/>
+          <path d="M28 27 L212 31 C 230 36, 240 62, 242 102"/>
+          <path d="M30 33 C 92 104, 170 112, 214 98"/><path d="M182 -18 L152 58"/><path d="M142 82 L96 198"/><path d="M194 -12 L166 52"/>
+        </g>
+      </g>
+      </g>
+      <pattern id="rosettes" width="180" height="160" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+        <g class="rosette">
+          <circle cx="34" cy="30" r="13"/><circle cx="118" cy="22" r="10"/><circle cx="80" cy="88" r="15"/>
+          <circle cx="20" cy="118" r="9"/><circle cx="150" cy="112" r="12"/><circle cx="160" cy="50" r="7"/>
+        </g>
+        <g class="rosette-spot">
+          <circle cx="34" cy="30" r="3"/><circle cx="80" cy="88" r="4"/><circle cx="150" cy="112" r="3"/>
+        </g>
+      </pattern>
+    </defs>
+  </svg>
+  <header class="nav">
+    <div class="container">
+      <a class="wordmark" href="index.html" aria-label="Netra, accueil">Netra</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" data-menu-toggle>Menu</button>
+      <ul id="nav-list">
+        <li><a href="equipe.html">L’équipe</a></li>
+        <li><a href="programme.html" aria-current="page">Le programme</a></li>
+        <li><a href="campagne.html">La campagne</a></li>
+        <li><a class="nav__cta" href="petit-dej.html">Petit-déj</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="banner banner--programme" aria-labelledby="page-title">
+      <div class="jungle jungle--fringe" aria-hidden="true">
+        <svg class="jungle__layer" data-fringe="programme" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMax slice"></svg>
+      </div>
+      <div class="container banner__inner">
+        <svg class="banner__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg>
+        <h1 id="page-title">Le programme</h1>
+        <p class="lead">Ce qu’on veut changer sur le campus.</p>
+      </div>
+    </section>
+
+    <section class="programme" aria-label="Les axes du programme">
+      <div class="container">
+        <div class="axes" data-programme>
+          <div class="empty">
+            <svg class="empty__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg>
+            <p class="empty__title">Le programme n’est pas encore publié.</p>
+            <p class="empty__line">Il apparaîtra ici, axe par axe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <svg class="footer__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg>
+        <a class="wordmark" href="index.html" aria-label="Netra, accueil">Netra</a>
+        <p>Liste candidate au Bureau des Élèves de Télécom SudParis et Institut Mines&#8209;Télécom Business School, campus d’Évry.</p>
+      </div>
+      <ul>
+        <li><a href="equipe.html">L’équipe</a></li>
+        <li><a href="programme.html">Le programme</a></li>
+        <li><a href="campagne.html">La campagne</a></li>
+        <li><a href="petit-dej.html">Petit-déj</a></li>
+        <li data-insta hidden><a href="#" data-insta-link>Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
