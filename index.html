@@ -1,175 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Netra, liste BDE Télécom SudParis et IMT-BS</title>
-  <meta name="description" content="Netra, liste candidate au BDE de Télécom SudParis et IMT Business School.">
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=general-sans@400,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script>
-    document.documentElement.classList.add('js');
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
-    try { if (sessionStorage.getItem('netra-curtain') === '1') document.documentElement.classList.add('from-curtain'); } catch (e) {}
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETRA — Liste BDE Télécom SudParis & IMT-BS</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-  <header class="nav">
-  <div class="container">
-    <a class="brand" href="index.html" aria-label="Netra, accueil">
-      <span class="brand__logo-placeholder" aria-hidden="true"></span>
-      <span class="wordmark">Netra</span>
-    </a>
-    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" data-menu-toggle>Menu</button>
-    <ul id="nav-list">
-      <li><a href="index.html" aria-current="page">Accueil</a></li>
-      <li><a href="equipe.html">Organigramme</a></li>
-      <li><a href="programme.html">Programme</a></li>
-      <li><a href="campagne.html#clips-title">Nos Clips</a></li>
-      <li><a href="campagne.html#tl-title">Timeline</a></li>
-      <li><a href="jeux.html">Jeux</a></li>
-    </ul>
-    <div class="nav__socials">
-      <a href="https://www.instagram.com/netra_2027_listebde/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+<body>
+
+  <!-- BARRE DU HAUT -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <!-- Gauche : Cercle vide + Nom -->
+      <a href="index.html" class="brand">
+        <span class="logo-placeholder" title="Emplacement futur logo"></span>
+        <span>NETRA</span>
       </a>
-      <a href="https://www.facebook.com/profile.php?id=61596036641725" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      </a>
-      <a href="https://www.youtube.com/@Netra2027" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-      </a>
-    </div>
-  </div>
-</header>
-    <div class="container">
-      <a class="wordmark" href="index.html" aria-label="Netra, accueil">Netra</a>
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" data-menu-toggle>Menu</button>
-      <ul id="nav-list">
-        <li><a href="equipe.html">L’équipe</a></li>
-        <li><a href="programme.html">Le programme</a></li>
-        <li><a href="campagne.html">La campagne</a></li>
-        <li><a class="nav__cta" href="petit-dej.html">Petit-déj</a></li>
+
+      <!-- Centre : Liens demandés -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="organigramme.html">Organigramme</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="index.html#clips">Nos Clips</a></li>
+        <li><a href="index.html#timeline">Timeline</a></li>
+        <li><a href="jeux.html">Jeux</a></li>
+        <!-- Apparaît uniquement 48h avant les petits-déjs -->
+        <li id="nav-petitdej-item" hidden><a href="#petit-dej" class="nav-petitdej">Petit-Déj 1€</a></li>
       </ul>
+
+      <!-- Droite : Réseaux sociaux -->
+      <div class="nav-socials">
+        <a href="https://www.instagram.com/netra_2027_listebde/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61596036641725" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@Netra2027" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title" data-loop>
-      <div class="jungle" aria-hidden="true">
-        <svg class="jungle__layer" data-depth="2" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"></svg>
-        <canvas class="fireflies"></canvas>
-        <svg class="jungle__layer" data-depth="1" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"></svg>
-      </div>
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__veil" aria-hidden="true"></div>
-
-      <div class="container hero__inner">
-        <div class="hero__gaze">
-          <span class="gaze__halo" aria-hidden="true"></span>
-          <svg class="hero__eyes" viewBox="0 0 600 200" role="img" aria-label="Les yeux de la panthère Netra"><use href="#eyes-art"/></svg>
-        </div>
-        <h1 id="hero-title" class="wordmark-neon">Netra</h1>
-        <p class="lead">Liste candidate au BDE de Télécom SudParis et IMT&#8209;BS.</p>
-        <div class="actions">
-          <a class="btn" href="petit-dej.html">Commander un petit&#8209;déj</a>
-          <a class="btn btn--quiet" href="equipe.html">Voir l’équipe</a>
-        </div>
-      </div>
-
-      <button class="motion-toggle" type="button" data-loop-toggle aria-pressed="false">Pause</button>
-    </section>
-
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon__row" data-dir="-1">
-        <span>Netra</span><svg class="ribbon__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg><span>L’œil</span><svg class="ribbon__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg><span>Netra</span><svg class="ribbon__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg><span>L’œil</span><svg class="ribbon__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg><span>Netra</span><svg class="ribbon__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg>
-      </div>
-      <div class="ribbon__row ribbon__row--outline" data-dir="1">
-        <span>TSP</span><span>IMT&#8209;BS</span><span>Netra</span><span>TSP</span><span>IMT&#8209;BS</span><span>Netra</span><span>TSP</span><span>IMT&#8209;BS</span><span>Netra</span>
-      </div>
-    </div>
-
-    <section class="manifesto" aria-labelledby="manifesto-title">
-      <div class="container">
-        <h2 id="manifesto-title" class="visually-hidden">Ce que veut dire Netra</h2>
-        <p class="manifesto__text" data-words>En sanskrit, netra veut dire l’œil.</p>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="hero__title">NETRA</h1>
+      <p class="hero__desc">Liste candidate au Bureau des Élèves de Télécom SudParis & Institut Mines-Télécom Business School.</p>
+      <div class="hero__actions">
+        <a href="organigramme.html" class="btn">Découvrir l'équipe</a>
+        <a href="programme.html" class="btn btn--outline">Notre programme</a>
       </div>
     </section>
 
-    <section class="explore" aria-labelledby="explore-title">
-      <div class="container">
-        <h2 id="explore-title" class="explore__title">Entrez dans la jungle</h2>
-        <div class="paths">
-          <a class="path path--lead" href="petit-dej.html">
-            <svg class="path__leaves" data-leaves="1" viewBox="0 0 400 300" aria-hidden="true"></svg>
-            <span class="path__title">Le petit&#8209;déj</span>
-            <span class="path__line">Tu commandes, on livre à ta porte.</span>
-            <span class="path__go">Commander</span>
-          </a>
-          <a class="path" href="equipe.html">
-            <svg class="path__leaves" data-leaves="2" viewBox="0 0 400 300" aria-hidden="true"></svg>
-            <span class="path__title">L’équipe</span>
-            <span class="path__line">Le bureau et les pôles.</span>
-            <span class="path__go">Voir l’organigramme</span>
-          </a>
-          <a class="path" href="programme.html">
-            <svg class="path__leaves" data-leaves="3" viewBox="0 0 400 300" aria-hidden="true"></svg>
-            <span class="path__title">Le programme</span>
-            <span class="path__line">Ce qu’on veut changer.</span>
-            <span class="path__go">Lire le programme</span>
-          </a>
-          <a class="path" href="campagne.html">
-            <svg class="path__leaves" data-leaves="4" viewBox="0 0 400 300" aria-hidden="true"></svg>
-            <span class="path__title">La campagne</span>
-            <span class="path__line">Les dates clés et les clips.</span>
-            <span class="path__go">Voir les dates</span>
-          </a>
-        </div>
+    <!-- FENÊTRE PETITS-DÉJEUNERS (Cachée tant qu'on n'est pas à H-48) -->
+    <section id="petit-dej" class="container" hidden>
+      <div class="card" style="border-color: var(--neon-green);">
+        <h2 class="section-title">🥐 Commander son Petit-Déjeuner (1 €)</h2>
+        <p class="section-subtitle">Livraison exclusivement à Évry pour les cotisants BDE.</p>
+        <form id="form-petitdej">
+          <div class="form-group">
+            <label>Nom & Prénom</label>
+            <input type="text" name="nom" required placeholder="Ex: Camille Dupont">
+          </div>
+          <div class="form-group">
+            <label>Email campus (pour vérification cotisant)</label>
+            <input type="email" name="email" required placeholder="prenom.nom@telecom-sudparis.eu">
+          </div>
+          <div class="form-group">
+            <label>Lieu de livraison à Évry (Bâtiment Maisel ou adresse Évry)</label>
+            <input type="text" name="adresse" required placeholder="Ex: Maisel U4 - Chambre 214">
+          </div>
+          <div class="form-group">
+            <label>Menu choisi (1 €)</label>
+            <select name="menu" id="select-menu" required></select>
+          </div>
+          <div class="form-group">
+            <label>Créneau de livraison</label>
+            <select name="creneau" required>
+              <option value="07h30-08h00">07h30 - 08h00</option>
+              <option value="08h00-08h30">08h00 - 08h30</option>
+              <option value="08h30-09h00">08h30 - 09h00</option>
+              <option value="09h00-09h30">09h00 - 09h30</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Valider ma commande (1 €)</button>
+          <p id="order-feedback" style="margin-top: 12px; color: var(--neon-green);"></p>
+        </form>
       </div>
     </section>
 
-    <section class="vote" id="vote" aria-labelledby="vote-title">
-      <div class="jungle jungle--fringe" aria-hidden="true">
-        <svg class="jungle__layer" data-fringe="vote" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMax slice"></svg>
-      </div>
-      <div class="container vote__inner">
-        <svg class="vote__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg>
-        <h2 id="vote-title">Le vote</h2>
-        <div class="countdown" data-countdown>
-          <p class="countdown__empty">Date du vote&#8239;: <span class="fill" data-fill="date-vote">à annoncer</span></p>
-          <dl class="countdown__grid" hidden>
-            <div><dt>jours</dt><dd data-unit="d">00</dd></div>
-            <div><dt>heures</dt><dd data-unit="h">00</dd></div>
-            <div><dt>minutes</dt><dd data-unit="m">00</dd></div>
-            <div><dt>secondes</dt><dd data-unit="s">00</dd></div>
-          </dl>
-        </div>
-        <a class="btn btn--quiet vote__more" href="campagne.html">Les dates de la campagne</a>
-      </div>
+    <!-- NOS CLIPS -->
+    <section id="clips" class="container">
+      <h2 class="section-title">Nos Clips</h2>
+      <p class="section-subtitle">Plonge dans l'univers Netra en vidéo.</p>
+      <div id="clips-container" class="grid-cards"></div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="container">
+      <h2 class="section-title">Timeline de Campagne</h2>
+      <p class="section-subtitle">Les moments forts jusqu'au vote.</p>
+      <div id="timeline-container" class="timeline"></div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div>
-        <svg class="footer__eyes" viewBox="0 0 600 200" aria-hidden="true"><use href="#eyes-art"/></svg>
-        <a class="wordmark" href="index.html" aria-label="Netra, accueil">Netra</a>
-        <p>Liste candidate au Bureau des Élèves de Télécom SudParis et Institut Mines&#8209;Télécom Business School, campus d’Évry.</p>
-      </div>
-      <ul>
-        <li><a href="equipe.html">L’équipe</a></li>
-        <li><a href="programme.html">Le programme</a></li>
-        <li><a href="campagne.html">La campagne</a></li>
-        <li><a href="petit-dej.html">Petit-déj</a></li>
-        <li data-insta hidden><a href="#" data-insta-link>Instagram</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="data.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
